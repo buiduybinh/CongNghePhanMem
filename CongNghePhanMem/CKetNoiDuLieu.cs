@@ -13,24 +13,33 @@ namespace CongNghePhanMem {
 
       public CKetNoiDuLieu(string serverName, string databaseName) {
          ketNoi = new SqlConnection();
-         string chuoikn = "Data Source="+serverName +"; Initial Catalog = "+ databaseName + "; Integrated Security=true";
-         ketNoi.ConnectionString = chuoikn;
+         string chuoiKetNoi = "Data Source="+serverName +"; Initial Catalog = "+ databaseName + "; Integrated Security=true";
+         ketNoi.ConnectionString = chuoiKetNoi;
       }
 
       public CKetNoiDuLieu():this(".","QLSV") {
       }
 
+      /// <summary>
+      /// Đọc dữ liệu từ SQL 
+      /// </summary>
+      /// <param name="sql">Câu lệnh SQL</param>
+      /// <returns>DataTable</returns>
       public DataTable DocDuLieu(string sql) {
          boDocGhi = new SqlDataAdapter(sql,ketNoi);
-         DataTable tam = new DataTable();
-         boDocGhi.Fill(tam);
-         return tam;
+         DataTable bangTam = new DataTable();
+         boDocGhi.Fill(bangTam);
+         return bangTam;
       }
 
-     public void CapNhatDuLieu(DataTable bang) {
+      /// <summary>
+      /// Thêm, Cập nhật, Xoá dữ liệu
+      /// </summary>
+      /// <param name="bangDuLieu">DataTable chứa dữ liệu</param>
+      public void CapNhatDuLieu(DataTable bangDuLieu) {
          SqlCommandBuilder capNhat = new SqlCommandBuilder(boDocGhi);
-         boDocGhi.Update(bang);
-         //bang.AcceptChanges();
+         boDocGhi.Update(bangDuLieu);
+         bangDuLieu.AcceptChanges();
       }
    }
 }

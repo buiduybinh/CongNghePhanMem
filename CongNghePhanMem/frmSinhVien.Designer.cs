@@ -114,7 +114,7 @@
          this.txtMaSV.Location = new System.Drawing.Point(76, 24);
          this.txtMaSV.Name = "txtMaSV";
          this.txtMaSV.Size = new System.Drawing.Size(95, 20);
-         this.txtMaSV.TabIndex = 1;
+         this.txtMaSV.TabIndex = 0;
          // 
          // txtHoTen
          // 
@@ -128,14 +128,14 @@
          this.txtDienThoai.Location = new System.Drawing.Point(373, 52);
          this.txtDienThoai.Name = "txtDienThoai";
          this.txtDienThoai.Size = new System.Drawing.Size(95, 20);
-         this.txtDienThoai.TabIndex = 1;
+         this.txtDienThoai.TabIndex = 4;
          // 
          // txtDiaChi
          // 
          this.txtDiaChi.Location = new System.Drawing.Point(73, 81);
          this.txtDiaChi.Name = "txtDiaChi";
          this.txtDiaChi.Size = new System.Drawing.Size(395, 20);
-         this.txtDiaChi.TabIndex = 1;
+         this.txtDiaChi.TabIndex = 5;
          // 
          // cboGioiTinh
          // 
@@ -157,7 +157,7 @@
          this.cboLop.Location = new System.Drawing.Point(73, 110);
          this.cboLop.Name = "cboLop";
          this.cboLop.Size = new System.Drawing.Size(294, 21);
-         this.cboLop.TabIndex = 2;
+         this.cboLop.TabIndex = 6;
          // 
          // dtpNgaySinh
          // 
@@ -173,7 +173,7 @@
          this.btnXoa.Location = new System.Drawing.Point(388, 142);
          this.btnXoa.Name = "btnXoa";
          this.btnXoa.Size = new System.Drawing.Size(75, 23);
-         this.btnXoa.TabIndex = 10;
+         this.btnXoa.TabIndex = 11;
          this.btnXoa.Text = "Xoá";
          this.btnXoa.UseVisualStyleBackColor = true;
          this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
@@ -183,7 +183,7 @@
          this.btnSua.Location = new System.Drawing.Point(307, 142);
          this.btnSua.Name = "btnSua";
          this.btnSua.Size = new System.Drawing.Size(75, 23);
-         this.btnSua.TabIndex = 9;
+         this.btnSua.TabIndex = 10;
          this.btnSua.Text = "Sửa";
          this.btnSua.UseVisualStyleBackColor = true;
          this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
@@ -194,7 +194,7 @@
          this.btnThem.Location = new System.Drawing.Point(226, 142);
          this.btnThem.Name = "btnThem";
          this.btnThem.Size = new System.Drawing.Size(75, 23);
-         this.btnThem.TabIndex = 8;
+         this.btnThem.TabIndex = 9;
          this.btnThem.Text = "Thêm";
          this.btnThem.UseVisualStyleBackColor = true;
          this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
@@ -204,7 +204,7 @@
          this.btnNhapLai.Location = new System.Drawing.Point(145, 142);
          this.btnNhapLai.Name = "btnNhapLai";
          this.btnNhapLai.Size = new System.Drawing.Size(75, 23);
-         this.btnNhapLai.TabIndex = 7;
+         this.btnNhapLai.TabIndex = 8;
          this.btnNhapLai.Text = "Nhập Lại";
          this.btnNhapLai.UseVisualStyleBackColor = true;
          this.btnNhapLai.Click += new System.EventHandler(this.btnNhapLai_Click);
@@ -214,7 +214,7 @@
          this.btnThemLop.Location = new System.Drawing.Point(373, 109);
          this.btnThemLop.Name = "btnThemLop";
          this.btnThemLop.Size = new System.Drawing.Size(38, 23);
-         this.btnThemLop.TabIndex = 11;
+         this.btnThemLop.TabIndex = 7;
          this.btnThemLop.Text = "...";
          this.btnThemLop.UseVisualStyleBackColor = true;
          this.btnThemLop.Click += new System.EventHandler(this.btnThemLop_Click);

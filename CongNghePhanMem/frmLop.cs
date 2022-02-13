@@ -14,21 +14,21 @@ namespace CongNghePhanMem {
          InitializeComponent();
       }
 
-      CKetNoiDuLieu ketNoi = new CKetNoiDuLieu();
+      CKetNoiDuLieu ketNoiLop = new CKetNoiDuLieu();
       DataTable bangLop = new DataTable();
       int donghh;
 
-      private void hienThiLop() {
+      private void HienThiLop() {
          string sql = "Select * from LOP";
-         bangLop = ketNoi.DocDuLieu(sql);
+         bangLop = ketNoiLop.DocDuLieu(sql);
          dgvDanhSach.DataSource = bangLop;
       }
 
       private void Form1_Load(object sender,EventArgs e) {
-         hienThiLop();
+         HienThiLop();
       }
 
-      private void thietLapTinhTrang(bool b) {
+      private void ThietLapTinhTrang(bool b) {
          txtMaLop.ReadOnly = b;
          btnThem.Enabled = !b;
          btnSua.Enabled = b;
@@ -39,7 +39,7 @@ namespace CongNghePhanMem {
          txtMaLop.Clear();
          txtTenLop.Clear();
          txtSiSo.Clear();
-         thietLapTinhTrang(false);
+         ThietLapTinhTrang(false);
       }
 
       private void btnThem_Click(object sender,EventArgs e) {
@@ -51,32 +51,32 @@ namespace CongNghePhanMem {
             dongMoi["tenlop"] = txtTenLop.Text;
             dongMoi["siso"] = txtSiSo.Text;
             bangLop.Rows.Add(dongMoi);
-            ketNoi.CapNhatDuLieu(bangLop);
+            ketNoiLop.CapNhatDuLieu(bangLop);
             bangLop.Clear();
-            hienThiLop();
-            thietLapTinhTrang(true);
+            HienThiLop();
+            ThietLapTinhTrang(true);
          }
       }
 
       private void btnXoa_Click(object sender,EventArgs e) {
          try {
             bangLop.Rows[donghh].Delete();
-            ketNoi.CapNhatDuLieu(bangLop);
+            ketNoiLop.CapNhatDuLieu(bangLop);
             btnNhapLai_Click(null,null);
          } catch {
             MessageBox.Show("Không thể xoá","Thông Báo");
          }
          bangLop.Clear();
-         hienThiLop();
+         HienThiLop();
       }
 
       private void btnSua_Click(object sender,EventArgs e) {
          bangLop.Rows[donghh]["malop"] = txtMaLop.Text;
          bangLop.Rows[donghh]["tenlop"] = txtTenLop.Text;
          bangLop.Rows[donghh]["siso"] = txtSiSo.Text;
-         ketNoi.CapNhatDuLieu(bangLop);
+         ketNoiLop.CapNhatDuLieu(bangLop);
          bangLop.Clear();
-         hienThiLop();
+         HienThiLop();
       }
 
       private void dgvDanhSach_CellClick(object sender,DataGridViewCellEventArgs e) {
@@ -85,7 +85,7 @@ namespace CongNghePhanMem {
             txtMaLop.Text = bangLop.Rows[donghh]["malop"].ToString();
             txtTenLop.Text = bangLop.Rows[donghh]["tenlop"].ToString();
             txtSiSo.Text = bangLop.Rows[donghh]["siso"].ToString();
-            thietLapTinhTrang(true);
+            ThietLapTinhTrang(true);
          }
       }
    }
