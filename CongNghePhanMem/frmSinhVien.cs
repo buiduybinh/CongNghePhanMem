@@ -23,7 +23,7 @@ namespace CongNghePhanMem {
          string sql = "Select * From LOP";
          cboLop.DisplayMember = "tenlop";
          cboLop.ValueMember = "malop";
-         cboLop.DataSource = ketNoiSinhVien.DocDuLieu(sql);
+         cboLop.DataSource = ketNoiLop.DocDuLieu(sql);
       }
 
       private void HienThiSinhVien() {

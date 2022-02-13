@@ -67,7 +67,7 @@
          // label3
          // 
          this.label3.AutoSize = true;
-         this.label3.Location = new System.Drawing.Point(28, 56);
+         this.label3.Location = new System.Drawing.Point(20, 56);
          this.label3.Name = "label3";
          this.label3.Size = new System.Drawing.Size(47, 13);
          this.label3.TabIndex = 0;
@@ -94,7 +94,7 @@
          // label6
          // 
          this.label6.AutoSize = true;
-         this.label6.Location = new System.Drawing.Point(28, 85);
+         this.label6.Location = new System.Drawing.Point(27, 85);
          this.label6.Name = "label6";
          this.label6.Size = new System.Drawing.Size(40, 13);
          this.label6.TabIndex = 0;
@@ -103,7 +103,7 @@
          // label7
          // 
          this.label7.AutoSize = true;
-         this.label7.Location = new System.Drawing.Point(28, 114);
+         this.label7.Location = new System.Drawing.Point(42, 114);
          this.label7.Name = "label7";
          this.label7.Size = new System.Drawing.Size(25, 13);
          this.label7.TabIndex = 0;
@@ -260,7 +260,7 @@
          this.Controls.Add(this.label2);
          this.Controls.Add(this.label1);
          this.Name = "frmSinhVien";
-         this.Text = "frmSinhVien";
+         this.Text = "Quản Lý Sinh Viên";
          this.Load += new System.EventHandler(this.frmSinhVien_Load);
          ((System.ComponentModel.ISupportInitialize)(this.dgvSinhVien)).EndInit();
          this.ResumeLayout(false);
